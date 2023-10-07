@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.bg-image1 {
+    background-image: url(./assets/banner1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bg-image2 {
+    background-image: url(./assets/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bg-image3 {
+    background-image: url(./assets/banner3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bg-image4 {
+    background-image: url(./assets/banner4.jpg);
+    background-position: center;
+    background-size: cover;
+}
+

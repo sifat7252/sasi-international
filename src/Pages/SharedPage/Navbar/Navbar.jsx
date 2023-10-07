@@ -1,30 +1,31 @@
 import { Link } from "react-router-dom";
+import userDefaultPic from "../../../assets/user-removebg-preview.png"
 
 const Navbar = () => {
 
     const navLinks = 
     <>
-    <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
+    <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal  leading-normal text-inherit antialiased">
                 <Link to={"/"} className="flex items-center">
                   Home
                 </Link>
               </li>
-              <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
+              <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
                 <Link to={"/classes"} className="flex items-center">
                   Classes
                 </Link>
               </li>
-              <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
+              <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
                 <Link to={"/courses"} className="flex items-center">
                   Courses
                 </Link>
               </li>
-              <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
+              <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
                 <Link to={"/pages"} className="flex items-center">
                   Pages
                 </Link>
               </li>
-              <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
+              <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
                 <Link to={"/contact"} className="flex items-center">
                   Contact
                 </Link>
@@ -34,7 +35,7 @@ const Navbar = () => {
     <div>
       
       
-      <div className="navbar bg-base-100 sticky shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-4 lg:py-2  border  bg-opacity-80 py-2 px-4 text-black inset-0 z-10">
+      <div className="navbar rounded-lg bg-blue-200 sticky shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-4 lg:py-2  border  bg-opacity-80 py-1 px-3 text-black inset-0 z-10">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -60,7 +61,7 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-2xl">SaSi International</a>
+          <a className=" btn btn-ghost  normal-case lg:text-2xl text-lg text-transparent bg-clip-text  font-bold bg-gradient-to-r from-violet-500 to-fuchsia-500">SaSi <span className="">International</span></a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -68,15 +69,18 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="lg:w-10 w-7 rounded-full lg:mr-4 mr-2 ">
+          <img src={userDefaultPic} />
+        </div>
+          <Link className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">LogIn</Link>
         </div>
       </div>
-      <div className="mx-auto max-w-screen-md py-8 border">
+      {/* <div className="mx-auto max-w-screen-md py-8 border">
           <div className="relative mb-12 flex flex-col overflow-hidden rounded-xl bg-white bg-clip-border border shadow-md">
             
           </div>
           
-        </div>
+        </div> */}
     </div>
   );
 };
