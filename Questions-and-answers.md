@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B ?
 
-<i>Write your explanation here</i>
+<i>Here we declared the variable named "greeting" but here console "greetign" which is an another variable. JavaScript is case-sensitive, so "greeting" and :greetign" are shown as two different variables. so its shows "ReferenceError: greetign is not defined"</i>
 
 </p>
 </details>
@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C ?
 
-<i>Write your explanation here</i>
+<i>The answer will be 12. Because the sum function try to be add the element a and b . But the sum will called a number and a string so the function add a number (1) and a string ("2"). So, when we call sum(1, "2"); , the result will be "12" (a string), not the numeric value 3.</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A ?
 
-<i>Write your explanation here</i>
+<i>Here, you have an array food and an object info with a property favoriteFood that is initially assigned the value of the first element of the food array, which is "🍕".However, you then reassign the info.favoriteFood property to "🍝". This reassignment does not affect the original food array in any way. so the result will be `['🍕', '🍫', '🥑', '🍔']` </i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B ?
 
-<i>Write your explanation here</i>
+<i>Here, the function are create with a name parameter, but log ar happened with no parameter. so the parameter will show undefined and anser will be "Hi there, undefined"</i>
 
 </p>
 </details>
@@ -122,9 +122,10 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C ?
 
-<i>Write your explanation here</i>
+<i>Here, we have an array nums containing numbers, and we're using the forEach method to iterate over each element of the array. Inside the forEach callback function, we have a conditional statement that checks if num is truthy, it increments the count variable by 1.
+the 0 is not count for the function so the answer will be 3 as well.</i>
 
 </p>
 </details>
