@@ -35,9 +35,9 @@ const Navbar = () => {
     <div>
       
       
-      <div className="navbar rounded-lg bg-blue-200 sticky shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-4 lg:py-2  border  bg-opacity-80 py-1 px-3 text-black inset-0 z-10">
+      <div className="navbar rounded-lg bg-blue-100 sticky shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-4 lg:py-2  border  bg-opacity-80 py-1 px-3 text-black inset-0 z-10">
         <div className="navbar-start">
-          <div className="dropdown">
+          <div className="dropdown dropdown-hover">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -56,14 +56,14 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content  mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navLinks}
             </ul>
           </div>
           <a className=" btn btn-ghost  normal-case lg:text-2xl text-lg text-transparent bg-clip-text  font-bold bg-gradient-to-r from-violet-500 to-fuchsia-500">SaSi <span className="">International</span></a>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden  lg:flex">
           <ul className="menu menu-horizontal px-1">
             {navLinks}
           </ul>
