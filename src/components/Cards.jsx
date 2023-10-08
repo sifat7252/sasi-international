@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Cards = ({ card }) => {
-    console.log(card.title)
+    // console.log(card.title)
   return (
     <div>
       <div className="course-cards grid grid-cols-2">

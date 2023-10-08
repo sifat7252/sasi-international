@@ -1,7 +1,20 @@
 import { Link } from "react-router-dom";
 import userDefaultPic from "../../../assets/user-removebg-preview.png"
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Navbar = () => {
+  const {user, logOut } = useContext(AuthContext)
+
+
+  const handelLogOut = () =>{
+    logOut()
+    .then()
+    .catch()
+
+  }
+
+  
 
     const navLinks = 
     <>
@@ -69,10 +82,20 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-        <div className="lg:w-10 w-7 rounded-full lg:mr-4 mr-2 ">
+          {
+            user ?
+             <>
+             <div className="lg:w-10 w-7 rounded-full lg:mr-4 mr-2 ">
           <img src={userDefaultPic} />
         </div>
-          <Link to={'/login'} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">LogIn</Link>
+        <Link onClick={handelLogOut} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">LogOut</Link>
+
+            </> :
+             <Link to={'/login'} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">LogIn</Link>
+          }
+
+        
+         
         </div>
       </div>
       {/* <div className="mx-auto max-w-screen-md py-8 border">

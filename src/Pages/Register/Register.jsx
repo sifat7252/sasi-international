@@ -1,17 +1,57 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Navbar from "../SharedPage/Navbar/Navbar";
+import { AuthContext } from "../../Providers/AuthProvider";
+import swal from 'sweetalert';
+
+
 
 const Register = () => {
     const [showPasswordIcon, setShowPasswordIcon] = useState(false);
+    const {createUser} = useContext(AuthContext);
+    const [registerError, setRegisterError] = useState("");
+    const [successMessage, setSuccessMessage] = useState("");
 
     const handleRegister = e =>{
+        
+
         e.preventDefault();
         const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(name, email, password)
+        const accepted = e.target.checkbox.checked;
+        // console.log(name, email, password)
+
+      
+
+    // :: CONDITION FOR PASSWORD LENGTH , UPPERCASE-LOWERCASE , AND CHECKED TICKED ::::
+
+    if (password.length < 6) {
+      setRegisterError("Password should be At least 6 character");
+      return;    
+    } 
+    else if (!accepted) {
+      setRegisterError("You must be checked out term and policies");
+      return;
+    }
+
+        // :: CREATING NEW USER WITH EMAIL AND PASSWORD ::
+        createUser(email, password)
+        .then(result => {
+          setSuccessMessage("New User Created Successfully")
+          console.log(result.user)
+          swal("Congratulation !!", successMessage , "success");
+        })
+        .catch(error =>{
+          console.error(error)
+          setRegisterError(error.message);
+          swal("Opps !!", registerError, "error");
+        })
+        
+          
+
+
     }
     return (
         <div>
@@ -63,7 +103,7 @@ const Register = () => {
               data-ripple-dark="true"
             >
               <input
-                type="checkbox"
+                type="checkbox" name="checkbox"
                 className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-fuchsia-500 checked:bg-fuchsia-500 checked:before:bg-fuchsia-500 hover:before:opacity-10"
                 id="checkbox"
               />
@@ -86,7 +126,7 @@ const Register = () => {
             </label>
             <label
               className="mt-px cursor-pointer select-none font-light text-gray-700"
-              htmlFor="checkbox" name="checkbox" 
+              htmlFor="checkbox"  name="checkbox" id="checkbox" 
             >
               <p className="flex items-center font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
                 I agree the

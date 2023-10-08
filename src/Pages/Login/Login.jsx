@@ -1,18 +1,82 @@
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Navbar from "../SharedPage/Navbar/Navbar";
+import { AuthContext } from "../../Providers/AuthProvider";
+import swal from 'sweetalert';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 
 const Login = () => {
     const [showPasswordIcon, setShowPasswordIcon] = useState(false);
+    const [signInError, setSignInError] = useState('');
+    const [signInSuccessMessage, setSignInSuccessMessage] = useState('');
+    const { signIn, googleLogIn, githubLogIn } = useContext(AuthContext);
+     
 
     const handleLogin = e =>{
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password);
+
+
+        // :: CONDITION FOR PASSWORD LENGTH ::::
+
+    if (password.length < 6) {
+      setSignInError("Password should be At least 6 character");
+      swal("Opps !!", "Password should be At least 6 character" || signInError , "error");
+      return;    
+    } 
+
+        // ::: SIGN IN WITH EMAIL AND PASSWORD:::
+        signIn(email, password)
+        .then(result =>{
+          console.log(result.user)
+          setSignInSuccessMessage('Log In Successful')
+          swal("Congratulation !!", 'Log In Successful' || signInSuccessMessage , "success");
+        })
+        .catch(error=>{
+          console.error(error)
+          setSignInError(error.message)
+          swal("Opps !!", signInError , "error");
+        })
     }
+
+    // ::: SIGN IN WITH GOOGLE :::
+    const handleGoogleLogin = ()=>{
+      googleLogIn()
+      .then(result =>{
+        console.log(result)
+        setSignInSuccessMessage('Google Log In Successful')
+        swal("Congratulation !!", 'Google Log In Successful' || signInSuccessMessage , "success");
+      })
+      .catch(error=>{
+        setSignInError(error.message)
+        swal("Opps !!", signInError , "error");
+      })
+    }
+
+    // ::: SIGN IN WITH GITHUB :::
+    const handleGithubLogin = ()=>{
+      githubLogIn()
+      .then(result =>{
+        console.log(result)
+        setSignInSuccessMessage('Github Log In Successful')
+        swal("Congratulation !!", 'Github Log In Successful'|| signInSuccessMessage , "success");
+      })
+      .catch(error=>{
+        setSignInError(error.message)
+        swal("Opps !!", signInError , "error");
+      })
+    }
+
+
+
+
+
+
+
     return (
         <div>
             <Navbar></Navbar>
@@ -49,7 +113,7 @@ const Login = () => {
                 </label>
               </div>
             </div>
-            <div className="inline-flex items-center">
+            {/* <div className="inline-flex items-center">
               <label
                 className="relative -ml-2.5 flex cursor-pointer items-center rounded-full p-3"
                 htmlFor="checkbox"
@@ -91,7 +155,7 @@ const Login = () => {
                   </Link>
                 </p>
               </label>
-            </div>
+            </div> */}
             <button
               className="mt-6 block w-full select-none rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-fuchsia-500/20 transition-all hover:shadow-lg hover:shadow-fuchsia-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="submit"
@@ -110,6 +174,11 @@ const Login = () => {
                 </button>
               </Link>
             </p>
+            <div className="p-4">
+              
+                <button onClick={handleGoogleLogin} className='btn btn-outline flex text-sky-500 w-full m-2 mx-auto'><FaGoogle></FaGoogle> Google LogIn</button>
+                <button onClick={handleGithubLogin} className='btn btn-outline flex text-black-500 w-full m-2 mx-auto'><FaGithub></FaGithub> Github LogIn</button>
+            </div>
           </form>
         </div>
       </div>
