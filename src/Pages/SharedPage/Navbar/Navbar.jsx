@@ -61,7 +61,7 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className=" btn btn-ghost  normal-case lg:text-2xl text-lg text-transparent bg-clip-text  font-bold bg-gradient-to-r from-violet-500 to-fuchsia-500">SaSi <span className="">International</span></a>
+          <a className=" btn btn-ghost  normal-case lg:text-4xl text-lg text-transparent bg-clip-text  font-bold bg-gradient-to-r from-violet-500 to-fuchsia-500">SaSi International</a>
         </div>
         <div className="navbar-center hidden  lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -72,7 +72,7 @@ const Navbar = () => {
         <div className="lg:w-10 w-7 rounded-full lg:mr-4 mr-2 ">
           <img src={userDefaultPic} />
         </div>
-          <Link className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">LogIn</Link>
+          <Link to={'/login'} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">LogIn</Link>
         </div>
       </div>
       {/* <div className="mx-auto max-w-screen-md py-8 border">

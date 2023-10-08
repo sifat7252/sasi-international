@@ -1,27 +1,41 @@
-
-
 import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
+import ClassesPart from "../../components/classesPart";
 import Suggestion from "../../components/Suggestion";
 import Header from "../SharedPage/Header/Header";
 import Navbar from "../SharedPage/Navbar/Navbar";
-
+import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
-    return (
-        <div>
-            <Header></Header>
-            <Navbar></Navbar>
-            <div className="relative mb-12 flex flex-col overflow-hidden rounded-xl bg-white bg-clip-border border shadow-md">
-            <Banner ></Banner>
-            <Suggestion></Suggestion>
-
+  const cardsData = useLoaderData()
+  return (
+    <div>
+      <Header></Header>
+      <Navbar></Navbar>
+      <Banner></Banner>
+      <Suggestion></Suggestion>
+      <div>
+      <div className=" flex flex-col items-center justify-center item-center mx-auto ">
+                
+                <h2 className="font-semibold lg:text-5xl text-lg text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-fuchsia-500 my-4 ">Featured Classes</h2>
+                
+                <h2 className="text-xl mt-2 mb-6">ONLY THE GREATEST MINDS</h2>
+                <hr />
             </div>
-            
-            <h2 className="text-5xl">This is home page</h2>
-            <Footer></Footer>
+        <div className="grid lg:grid-cols-2 grid-cols-1">
+        {
+          cardsData?.map(card => <ClassesPart key={card.id} card={card}></ClassesPart>)
+        }
         </div>
-    );
+      </div>
+      {/* <ClassesPart></ClassesPart> */}
+
+
+
+      <Footer></Footer>
+      
+    </div>
+  );
 };
 
 export default Home;

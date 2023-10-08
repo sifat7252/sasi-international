@@ -5,6 +5,12 @@
       "picture": "https://i.ibb.co/DDY5ZV8/diggity-marketing-SB0-WARG16-HI-unsplash.jpg",
       "title": "Digital Marketing Masterclass",
       "rating": 4.3,
+      "price" : 15000,
+      "what_to_learn": [
+        "Digital marketing strategies",
+        "SEO techniques",
+        "Social media marketing"
+      ],
       "instructor_name": "Emily Brown",
       "instructor_picture": "https://i.ibb.co/Xz70q0f/teacher1.jpg",
       "instructor_professions": ["Digital Marketer", "SEO Specialist"],
@@ -16,6 +22,12 @@
       "picture": "https://i.ibb.co/NyZ1XK7/alexander-mils-l-CPh-Gxs7pww-unsplash.jpg",
       "title": "Financial Planning Workshop",
       "rating": 4.6,
+      "price" : 20000,
+      "what_to_learn": [
+        "Budgeting and saving",
+        "Investment strategies",
+        "Retirement planning"
+      ],
       "instructor_name": "Michael Anderson",
       "instructor_picture": "https://i.ibb.co/tQFRyLT/teacher5.jpg",
       "instructor_professions": ["Financial Advisor", "Investment Analyst"],
@@ -27,6 +39,12 @@
       "picture": "https://i.ibb.co/HP8L0Vq/robynne-hu-HOrh-Cn-Qsxn-Q-unsplash.jpg",
       "title": "Artificial Intelligence Fundamentals",
       "rating": 4.7,
+      "price" : 30000,
+      "what_to_learn": [
+        "Machine learning algorithms",
+        "Deep learning concepts",
+        "AI applications"
+      ],
       "instructor_name": "Lisa Roberts",
       "instructor_picture": "https://i.ibb.co/7RJ3rW6/teacher4.jpg",
       "instructor_professions": ["AI Researcher", "Machine Learning Expert"],
@@ -38,6 +56,12 @@
       "picture": "https://i.ibb.co/QYRqQ2h/luke-lung-lytup-CDJu-Sg-unsplash.jpg",
       "title": "Photography Workshop",
       "rating": 4.2,
+      "price" : 10000,
+      "what_to_learn": [
+        "Photography techniques",
+        "Editing and post-processing",
+        "Composition and framing"
+      ],
       "instructor_name": "Anne Wilson",
       "instructor_picture": "https://i.ibb.co/h8Wq7Vw/teacher3.jpg",
       "instructor_professions": ["Professional Photographer", "Photography Instructor"],
@@ -49,6 +73,12 @@
       "picture": "https://i.ibb.co/qDBsy8S/aaron-burden-QJDz-YT-K8-Xg-unsplash.jpg",
       "title": "Language Learning Intensive",
       "rating": 4.4,
+      "price" : 15000,
+      "what_to_learn": [
+        "Language grammar and vocabulary",
+        "Effective language learning techniques",
+        "Cultural insights"
+      ],
       "instructor_name": "Maria Rodriguez",
       "instructor_picture": "https://i.ibb.co/mHpTDcq/teacher6.jpg",
       "instructor_professions": ["Language Teacher", "Polyglot"],
@@ -56,15 +86,19 @@
       "location": "Seattle, WA"
     },
     {
-      "id": 6,
-      "picture": "https://i.ibb.co/G7gxzcy/team-meetting.jpg",
-      "title": "Leadership and Management Seminar",
-      "rating": 4.9,
-      "instructor_name": "Mil Yarn",
-      "instructor_picture": "https://i.ibb.co/vx96PHN/teacher2.jpg",
-      "instructor_professions": ["Leadership Coach", "Management Consultant"],
-      "details": "Enhance your leadership and management skills with James Taylor's seminar. Discover effective leadership strategies, team management techniques, and problem-solving approaches to excel in your career.",
-      "location": "Dallas, TX"
+      "id": "7",
+    "picture": "https://i.ibb.co/G7gxzcy/team-meetting.jpg",
+    "title": "Entrepreneurship Seminar",
+    "rating": 4.8,
+    "instructor-name": "Sarah Miller",
+    "instructor-picture": "https://i.ibb.co/vx96PHN/teacher2.jpg",
+    "instructor-professions": ["Entrepreneur", "Startup Advisor"],
+    "details": "This is the details for Entrepreneurship Seminar event.",
+    "what_to_learn": [
+      "Business idea development",
+      "Startup funding",
+      "Marketing and sales strategies"
+    ]
     }
   ]
   
