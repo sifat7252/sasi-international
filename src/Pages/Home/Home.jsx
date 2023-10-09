@@ -4,6 +4,7 @@ import ClassesPart from "../../components/ClassesPart";
 import Suggestion from "../../components/Suggestion";
 import { useLoaderData } from "react-router-dom";
 import OthersCategories from "../../components/OthersCategories";
+import BestTeachers from "../../components/BestTeachers";
 
 const Home = () => {
   const cardsData = useLoaderData()
@@ -30,6 +31,7 @@ const Home = () => {
       <div>
         <OthersCategories></OthersCategories>
       </div>
+      <BestTeachers></BestTeachers>
       
 
 

@@ -86,19 +86,21 @@
       "location": "Seattle, WA"
     },
     {
-      "id": "7",
+      "id": "6",
     "picture": "https://i.ibb.co/G7gxzcy/team-meetting.jpg",
     "title": "Entrepreneurship Seminar",
     "rating": 4.8,
-    "instructor-name": "Sarah Miller",
-    "instructor-picture": "https://i.ibb.co/vx96PHN/teacher2.jpg",
-    "instructor-professions": ["Entrepreneur", "Startup Advisor"],
-    "details": "This is the details for Entrepreneurship Seminar event.",
+    "price" : 15000,
     "what_to_learn": [
       "Business idea development",
       "Startup funding",
       "Marketing and sales strategies"
-    ]
+    ],
+    "instructor_name": "Sarah Miller",
+    "instructor_picture": "https://i.ibb.co/vx96PHN/teacher2.jpg",
+    "instructor_professions": ["Entrepreneur", "Startup Advisor"],
+    "details": "This is the details for Entrepreneurship Seminar event."
+
     }
   ]
   

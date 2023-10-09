@@ -11,7 +11,7 @@ const OthersCard = ({ cardData }) => {
         </figure>
         <div className="card-body relative top-40 lg:top-36">
           <Link to={`/otherCardDetails/${cardData.id}`}>
-            <h2 className="card-title hover:to-blue-500 ">{cardData.title}</h2>
+            <h2 className="card-title hover:bg-blue-500 ">{cardData.title}</h2>
           </Link>
         </div>
       </div>

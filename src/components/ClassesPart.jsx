@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import Cards from "./Cards";
 
-const ClassesPart = ({card}) => {
+const ClassesPart = ({ card }) => {
     // console.log(card)
     
     // const { picture, title, rating, price, what_to_learn, id } = {card} ;

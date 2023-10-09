@@ -106,7 +106,7 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          {/* <a className=" btn btn-ghost  normal-case lg:text-4xl text-lg text-transparent bg-clip-text  font-bold bg-gradient-to-r from-violet-500 to-fuchsia-500">SaSi International</a> */}
+          {/* <a className=" btn btn-ghost  normal-case lg:text-4xl text-lg font-bold text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-fuchsia-500">SaSi International</a> */}
           <div className=" flex  item-center">
             <img className=" h-18 w-48 text-transparent bg-clip-text  font-bold bg-gradient-to-r from-violet-500 to-fuchsia-500 " src={mainLogoColor} alt="" />
             </div>
