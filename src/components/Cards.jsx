@@ -5,10 +5,10 @@ const Cards = ({ card }) => {
     // console.log(card.title)
   return (
     <div>
-      <div className="course-cards grid grid-cols-2">
-        <div className="card card-compact w-auto bg-base-100 shadow-xl">
-          <figure>
-            <img src={card.picture} alt="class" />
+      <div className="course-cards">
+        <div className="card   bg-base-100 shadow-xl">
+          <figure className="">
+            <img className="lg:h-[300px] w-full" src={card.picture} alt="class" />
           </figure>
           <div className="card-body">
             <h2 className="card-title text-2xl">{card.title}</h2>
@@ -53,7 +53,7 @@ const Cards = ({ card }) => {
                 Price: <span className="text-sky-600">{card.price}</span>$
               </h2>
 
-              <Link>
+              <Link to={`/class/${card.id}`}>
                 <button className="btn btn-link text-sky-600">
                   View Details{" "}
                 </button>

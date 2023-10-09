@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useContext, useState } from "react";
-import Navbar from "../SharedPage/Navbar/Navbar";
+
 import { AuthContext } from "../../Providers/AuthProvider";
 import swal from 'sweetalert';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
@@ -79,10 +79,12 @@ const Login = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
+            
             <div className="flex justify-center items-center mt-8">
-        <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
-          <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+        <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-xl p-5 " data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000">
+          <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased text-transparent bg-clip-text  bg-gradient-to-r from-violet-500 to-fuchsia-500">
             Log In
           </h4>
           <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
@@ -174,6 +176,8 @@ const Login = () => {
                 </button>
               </Link>
             </p>
+            <hr className="mt-4 bg-gradient-to-r from-fuchsia-500  to-violet-500 h-1" />
+            
             <div className="p-4">
               
                 <button onClick={handleGoogleLogin} className='btn btn-outline flex text-sky-500 w-full m-2 mx-auto'><FaGoogle></FaGoogle> Google LogIn</button>

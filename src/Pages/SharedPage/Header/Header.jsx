@@ -1,8 +1,11 @@
-
+import mainLogo from "./../../../assets/logoWithName-removebg-preview.png"
 const Header = () => {
     return (
         <div>
-            <h2 className="text-2xl">This is header part</h2>
+            <div className=" flex  item-center border">
+            <img className="border " src={mainLogo} alt="" />
+            </div>
+            
         </div>
     );
 };

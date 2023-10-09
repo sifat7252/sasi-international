@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import userDefaultPic from "../../../assets/user-removebg-preview.png"
+
+import mainLogoColor from "./../../../assets/mainLogoWithColor-removebg-preview.png"
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 
@@ -14,18 +16,13 @@ const Navbar = () => {
 
   }
 
-  
+
 
     const navLinks = 
     <>
-    <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal  leading-normal text-inherit antialiased">
+    <li className="block p-1 font-sans text-sm md:text-base lg:text-xl text-black lg:font-semibold md:font-medium font-normal  leading-normal text-inherit antialiased">
                 <Link to={"/"} className="flex items-center">
                   Home
-                </Link>
-              </li>
-              <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
-                <Link to={"/classes"} className="flex items-center">
-                  Classes
                 </Link>
               </li>
               <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
@@ -34,10 +31,26 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
+                <Link to={"/classes"} className="flex items-center">
+                  Classes
+                </Link>
+              </li>
+              <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
+                <Link to={"/categories"} className="flex items-center">
+                  Categories
+                </Link>
+              </li>
+              {
+                user && 
+                <>             
+              
+              <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
                 <Link to={"/pages"} className="flex items-center">
                   Pages
                 </Link>
               </li>
+                </>
+              }
               <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
                 <Link to={"/contact"} className="flex items-center">
                   Contact
@@ -74,7 +87,10 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className=" btn btn-ghost  normal-case lg:text-4xl text-lg text-transparent bg-clip-text  font-bold bg-gradient-to-r from-violet-500 to-fuchsia-500">SaSi International</a>
+          {/* <a className=" btn btn-ghost  normal-case lg:text-4xl text-lg text-transparent bg-clip-text  font-bold bg-gradient-to-r from-violet-500 to-fuchsia-500">SaSi International</a> */}
+          <div className=" flex  item-center">
+            <img className=" h-18 w-48 text-transparent bg-clip-text  font-bold bg-gradient-to-r from-violet-500 to-fuchsia-500 " src={mainLogoColor} alt="" />
+            </div>
         </div>
         <div className="navbar-center hidden  lg:flex">
           <ul className="menu menu-horizontal px-1">

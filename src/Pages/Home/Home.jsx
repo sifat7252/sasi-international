@@ -1,17 +1,17 @@
 import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
-import ClassesPart from "../../components/classesPart";
+import ClassesPart from "../../components/ClassesPart";
 import Suggestion from "../../components/Suggestion";
 import Header from "../SharedPage/Header/Header";
-import Navbar from "../SharedPage/Navbar/Navbar";
+
 import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
   const cardsData = useLoaderData()
   return (
     <div>
-      <Header></Header>
-      <Navbar></Navbar>
+      
+      
       <Banner></Banner>
       <Suggestion></Suggestion>
       <div>

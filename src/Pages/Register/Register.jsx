@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import Navbar from "../SharedPage/Navbar/Navbar";
+
 import { AuthContext } from "../../Providers/AuthProvider";
 import swal from 'sweetalert';
 
@@ -17,7 +17,7 @@ const Register = () => {
         
 
         e.preventDefault();
-        const name = e.target.name.value;
+        // const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         const accepted = e.target.checkbox.checked;
@@ -55,7 +55,7 @@ const Register = () => {
     }
     return (
         <div>
-            <Navbar></Navbar>
+            
             <div className="flex justify-center items-center mt-8">
       <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
         <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
