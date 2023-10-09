@@ -1,0 +1,75 @@
+[
+    {
+      "id": "1",
+      "image": "https://i.ibb.co/h1qxHSt/architecht-trainning.jpg",
+      "title": "Architecture",
+      "details": "Architecture is the art and science of designing and constructing buildings and other physical structures. This field involves creativity, engineering, and a deep understanding of aesthetics. Learn about architectural history, design principles, sustainable architecture, and more in this comprehensive course.",
+      "price": 99.99,
+      "rating": 4.7
+    },
+    {
+      "id": "2",
+      "image": "https://i.ibb.co/f9fPTt4/education-webiner.jpg",
+      "title": "Education",
+      "details": "Education is the key to personal and societal development. Explore the world of teaching and learning, curriculum development, and educational psychology. Discover effective teaching methods and strategies for creating engaging and inclusive learning environments.",
+      "price": 79.99,
+      "rating": 4.8
+    },
+    {
+      "id": "3",
+      "image": "https://i.ibb.co/27jpgyq/engineering-training.jpg",
+      "title": "Engineering",
+      "details": "Engineering is the application of scientific and mathematical principles to design and build innovative solutions to real-world problems. Dive into the fascinating world of mechanical, electrical, civil, and software engineering. Learn about cutting-edge technologies and innovation.",
+      "price": 129.99,
+      "rating": 4.9
+    },
+    {
+      "id": "4",
+      "image": "https://i.ibb.co/T0bpYs8/geography-trainnig.jpg",
+      "title": "Geography",
+      "details": "Geography explores the Earth's landscapes, environments, and cultures. Understand the physical and human geography of our planet. Study maps, climate patterns, population demographics, and the impact of human activities on the environment.",
+      "price": 69.99,
+      "rating": 4.6
+    },
+    {
+      "id": "5",
+      "image": "https://i.ibb.co/61Y1nwX/law-management.jpg",
+      "title": "Law",
+      "details": "Law is the foundation of a just society. Explore legal principles, court systems, and various areas of law, including criminal law, civil law, and international law. Understand the role of lawyers and the importance of upholding justice.",
+      "price": 149.99,
+      "rating": 4.8
+    },
+    {
+      "id": "6",
+      "image": "https://i.ibb.co/cwpGfCb/medical-trainning.jpg",
+      "title": "Medical",
+      "details": "The field of medicine is dedicated to improving health and saving lives. Learn about anatomy, medical ethics, disease prevention, and healthcare practices. Gain insights into medical research and advancements in healthcare technology.",
+      "price": 199.99,
+      "rating": 4.9
+    },
+    {
+      "id": "7",
+      "image": "https://i.ibb.co/gVvgv8H/quantom-physics.jpg",
+      "title": "Quantum Physics",
+      "details": "Quantum physics delves into the strange and fascinating world of subatomic particles. Explore quantum mechanics, wave-particle duality, and quantum entanglement. Discover the implications of quantum physics on technology and our understanding of the universe.",
+      "price": 179.99,
+      "rating": 4.7
+    },
+    {
+      "id": "8",
+      "image": "https://i.ibb.co/qBVG9wQ/science-class.jpg",
+      "title": "Science",
+      "details": "Science is a systematic exploration of the natural world. Investigate various scientific disciplines, including biology, chemistry, physics, and environmental science. Understand the scientific method and its role in advancing human knowledge.",
+      "price": 89.99,
+      "rating": 4.6
+    },
+    {
+      "id": "9",
+      "image": "https://i.ibb.co/JkWyd1M/share-market-trainning.jpg",
+      "title": "Share Market",
+      "details": "The stock market plays a crucial role in the global economy. Learn about stock trading, investment strategies, risk management, and financial analysis. Understand the dynamics of stock markets and how to make informed investment decisions.",
+      "price": 119.99,
+      "rating": 4.8
+    }
+  ]
+  

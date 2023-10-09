@@ -1,18 +1,29 @@
 import { Link } from "react-router-dom";
 import userDefaultPic from "../../../assets/user-removebg-preview.png"
-
+import swal from 'sweetalert';
 import mainLogoColor from "./../../../assets/mainLogoWithColor-removebg-preview.png"
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Navbar = () => {
-  const {user, logOut } = useContext(AuthContext)
+  const {user, logOut } = useContext(AuthContext);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
 
-  const handelLogOut = () =>{
+
+  const handelLogOut = () => {
     logOut()
-    .then()
-    .catch()
+    .then(result =>{
+      console.log(result.user)
+      setSuccessMessage("Log Out SuccessFully")
+      swal("Congratulation !!", 'Log Out Successful' || successMessage , "success");
+    })
+    .catch(error=>{
+      console.error(error)
+      setErrorMessage(error)
+      swal("Opps !!", errorMessage , "error");
+    })
 
   }
 
@@ -40,6 +51,7 @@ const Navbar = () => {
                   Categories
                 </Link>
               </li>
+              
               {
                 user && 
                 <>             
@@ -56,6 +68,13 @@ const Navbar = () => {
                   Contact
                 </Link>
               </li>
+              {
+                !user &&  <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
+                <Link to={"/register"} className="flex items-center">
+                  Register
+                </Link>
+              </li>
+              }
     </>
   return (
     <div>

@@ -2,9 +2,8 @@ import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import ClassesPart from "../../components/ClassesPart";
 import Suggestion from "../../components/Suggestion";
-import Header from "../SharedPage/Header/Header";
-
 import { useLoaderData } from "react-router-dom";
+import OthersCategories from "../../components/OthersCategories";
 
 const Home = () => {
   const cardsData = useLoaderData()
@@ -28,10 +27,13 @@ const Home = () => {
         }
         </div>
       </div>
-      {/* <ClassesPart></ClassesPart> */}
+      <div>
+        <OthersCategories></OthersCategories>
+      </div>
+      
 
 
-
+        
       <Footer></Footer>
       
     </div>

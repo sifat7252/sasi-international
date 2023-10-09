@@ -11,6 +11,7 @@ import Category from "../Pages/Category/Category";
 import PrivateRoutes from "./PrivateRoute/PrivateRoutes";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Class from "../Pages/Class/Class";
+import OtherCardDetails from "../components/OtherCardDetails";
 
   const  Routes = createBrowserRouter([
     {
@@ -33,7 +34,8 @@ import Class from "../Pages/Class/Class";
         },
         {
           path: '/categories',
-          element: <PrivateRoutes><Category></Category></PrivateRoutes>
+          element: <Category></Category>,
+          loader: () => fetch('/public/othersCategories.json')
         },
         {
           path: '/login',
@@ -47,6 +49,11 @@ import Class from "../Pages/Class/Class";
           path: '/class/:id',
           element: <PrivateRoutes><Class></Class></PrivateRoutes>,
           loader: () => fetch('/public/categoris.json')
+        },
+        {
+          path: '/otherCardDetails/:id',
+          element: <PrivateRoutes><OtherCardDetails></OtherCardDetails></PrivateRoutes>,
+          loader: () => fetch('/public/othersCategories.json')
         }
       ]
     },

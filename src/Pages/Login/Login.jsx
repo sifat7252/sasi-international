@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useContext, useState } from "react";
 
@@ -12,7 +12,8 @@ const Login = () => {
     const [signInError, setSignInError] = useState('');
     const [signInSuccessMessage, setSignInSuccessMessage] = useState('');
     const { signIn, googleLogIn, githubLogIn } = useContext(AuthContext);
-     
+     const location = useLocation();
+     const navigate = useNavigate();
 
     const handleLogin = e =>{
         e.preventDefault();
@@ -35,6 +36,9 @@ const Login = () => {
           console.log(result.user)
           setSignInSuccessMessage('Log In Successful')
           swal("Congratulation !!", 'Log In Successful' || signInSuccessMessage , "success");
+
+          // ::: NAVIGATING AFTER LOGIN 
+          navigate(location?.state ? location.state : '/')
         })
         .catch(error=>{
           console.error(error)
