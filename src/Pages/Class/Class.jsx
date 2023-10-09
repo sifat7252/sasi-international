@@ -26,19 +26,21 @@ const Class = () => {
     // console.log(classDetails.title)
     setData(classDetails);
   }, [classData, id]);
-  console.log(data);
+  // console.log(data);
   // console.log(singleClass)
   return (
     <div>
-      <div className="card w-full bg-base-100 shadow-xl">
+      <div className="card w-full bg-base-100 lg:p-20 shadow-xl">
         <figure>
-          <img className="w-full rounded-lg" src={data.picture} alt="class" />
+          <img className="w-3/4 rounded-lg  " src={data.picture} alt="class" />
         </figure>
-        <div className="card-body">
-          <h2 className="card-title font-semibold lg:text-4xl lg:mb-5">
+        <div className="card-body ">
+          <div className="flex justify-center items-center">
+          <div>
+          <h2 className="card-title font-semibold lg:text-4xl lg:mb-5 text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-fuchsia-500">
             {data.title}
           </h2>
-          <div className="author-details flex  items-center gap-3 mb-4">
+          <div className="author-details flex justify-center items-center gap-3 mb-4">
             <div className="author-image">
               <img
                 src={data.instructor_picture}
@@ -48,13 +50,13 @@ const Class = () => {
             </div>
 
             <div className="author-details ">
-              <h2 className="font-semibold lg:text-2xl">
+              <h2 className="font-semibold lg:text-2xl text-slate-500">
                 {data.instructor_name}
               </h2>
               <h2 className="font-normal text-slate-500 lg:text-xl">
                 {data.instructor_professions}
               </h2>
-              <span className="flex gap-3 items-center mt-2">
+              <span className="flex  gap-7 items-center mt-2">
                 <FaFacebook></FaFacebook>
                 <FaInstagram></FaInstagram>
                 <FaLinkedinIn></FaLinkedinIn>
@@ -63,7 +65,7 @@ const Class = () => {
               </span>
             </div>
           </div>
-          <div className="flex gap-3 items-center lg:mb-4">
+          <div className=" flex justify-center gap-3 items-center lg:mb-4">
             <div className="rating lg:rating-md rating-sm">
               <input
                 type="radio"
@@ -92,6 +94,8 @@ const Class = () => {
               />
             </div>
             <h2>{data.rating}</h2>
+          </div>
+          </div>
           </div>
           <p className="text-slate-500 lg:text-xl">{data.details}</p>
           <div className="card-actions justify-center">

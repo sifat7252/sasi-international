@@ -21,8 +21,8 @@ const Navbar = () => {
     })
     .catch(error=>{
       console.error(error)
-      setErrorMessage(error)
-      swal("Opps !!", errorMessage , "error");
+      setErrorMessage("You are Logged out " )
+      swal("Opps !!", "You are Logged out " || errorMessage , "error");
     })
 
   }
@@ -31,19 +31,9 @@ const Navbar = () => {
 
     const navLinks = 
     <>
-    <li className="block p-1 font-sans text-sm md:text-base lg:text-xl text-black lg:font-semibold md:font-medium font-normal  leading-normal text-inherit antialiased">
+    <li className="block p-1 font-sans text-sm md:text-base lg:text-xl text-black lg:font-semibold md:font-medium font-normal  leading-normal  antialiased text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-fuchsia-500">
                 <Link to={"/"} className="flex items-center">
                   Home
-                </Link>
-              </li>
-              <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
-                <Link to={"/courses"} className="flex items-center">
-                  Courses
-                </Link>
-              </li>
-              <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
-                <Link to={"/classes"} className="flex items-center">
-                  Classes
                 </Link>
               </li>
               <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
@@ -51,12 +41,23 @@ const Navbar = () => {
                   Categories
                 </Link>
               </li>
+              <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal  antialiased text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-fuchsia-500">
+                <Link to={"/courses"} className="flex items-center">
+                  Courses
+                </Link>
+              </li>
+              {/* <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
+                <Link to={"/classes"} className="flex items-center">
+                  Classes
+                </Link>
+              </li> */}
+              
               
               {
                 user && 
                 <>             
               
-              <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
+              <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal  antialiased text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-fuchsia-500">
                 <Link to={"/pages"} className="flex items-center">
                   Pages
                 </Link>
@@ -69,7 +70,7 @@ const Navbar = () => {
                 </Link>
               </li>
               {
-                !user &&  <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal text-inherit antialiased">
+                !user &&  <li className="block p-1 font-sans text-sm lg:text-xl text-black lg:font-semibold font-normal leading-normal  antialiased text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-fuchsia-500">
                 <Link to={"/register"} className="flex items-center">
                   Register
                 </Link>
@@ -123,10 +124,10 @@ const Navbar = () => {
              <div className="lg:w-10 w-7 rounded-full lg:mr-4 mr-2 ">
           <img src={userDefaultPic} />
         </div>
-        <Link onClick={handelLogOut} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">LogOut</Link>
+        <Link onClick={handelLogOut} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gradient-to-r from-violet-400 to-fuchsia-400 text-white">LogOut</Link>
 
             </> :
-             <Link to={'/login'} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">LogIn</Link>
+             <Link to={'/login'} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gradient-to-r from-violet-400 to-fuchsia-400 text-white">LogIn</Link>
           }
 
         

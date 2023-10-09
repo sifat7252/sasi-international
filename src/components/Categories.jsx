@@ -10,7 +10,7 @@ const Categories = ({ category }) => {
           <img src={category.image} alt="Shoes" />
         </figure>
         <div className="card-body relative top-40 lg:top-36">
-          <Link>
+          <Link to={`/otherCardDetails/${category.id}`}>
             <h2 className="card-title ">{category.title}</h2>
           </Link>
         </div>

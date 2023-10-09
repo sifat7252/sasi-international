@@ -15,7 +15,7 @@ const ErrorPage = () => {
                   Oops! That page cant be found
                 </h4>
                 <p className="mb-8 text-lg text-white">
-                  The page you are looking for it maybe deleted
+                  The page you are looking for it maybe deleted or error
                 </p>
                 <a
                   href="/#"

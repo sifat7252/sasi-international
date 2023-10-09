@@ -7,7 +7,7 @@ const OthersCard = ({ cardData }) => {
         <div>
             <div className="card  bg-base-100 shadow-xl image-full">
         <figure>
-          <img src={cardData.image} alt="Shoes" />
+          <img src={cardData.image} alt="image" />
         </figure>
         <div className="card-body relative top-40 lg:top-36">
           <Link to={`/otherCardDetails/${cardData.id}`}>

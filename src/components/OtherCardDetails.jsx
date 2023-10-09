@@ -10,18 +10,20 @@ const OtherCardDetails = () => {
     const cardsDetails = cardDetails?.find((data) => data.id == id);
     setDetail(cardsDetails);
   }, [cardDetails, id]);
-  console.log(detail);
+  // console.log(detail);
 
 
 
   return (
     <div>
-      <div className="card w-full bg-base-100 shadow-xl">
+      <div className="card w-full bg-base-100 lg:p-20 shadow-xl">
         <figure>
-          <img className="w-full rounded-lg" src={detail.image} alt="class" />
+          <img className="w-3/4 rounded-lg" src={detail.image} alt="class" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title font-semibold lg:text-4xl lg:mb-5">
+          <div className="flex justify-center items-center">
+            <div>
+            <h2 className="card-title font-semibold lg:text-4xl lg:mb-5">
             {detail.title}
           </h2>
           
@@ -54,6 +56,8 @@ const OtherCardDetails = () => {
               />
             </div>
             <h2>{detail.rating}</h2>
+          </div>
+            </div>
           </div>
           <p className="text-slate-500 lg:text-xl">{detail.details}</p>
           <div className="card-actions justify-center">

@@ -42,8 +42,8 @@ const Login = () => {
         })
         .catch(error=>{
           console.error(error)
-          setSignInError(error.message)
-          swal("Opps !!", signInError , "error");
+          setSignInError("Your email or password is incorrect")
+          swal("Opps !!", "Your email or password is incorrect" || signInError , "error");
         })
     }
 
