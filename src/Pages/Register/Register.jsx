@@ -29,14 +29,17 @@ const Register = () => {
 
     if (password.length < 6) {
       setRegisterError("Password should be At least 6 character");
+      swal("Opps !!", registerError, "error");
       return;    
     }
     else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/.test(password)) {
       setRegisterError("Password Should at least one Uppercase, lowercase and number");
+      swal("Opps !!", registerError, "error");
       return;
     } 
     else if (!accepted) {
       setRegisterError("You must be checked out term and policies");
+      swal("Opps !!", registerError, "error");
       return;
     }
 

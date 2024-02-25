@@ -7,7 +7,7 @@ import OthersCard from "./OthersCard";
 const OthersCategories = () => {
     const [categoryData, setCategoryData] = useState([]); 
     useEffect(()=>{
-        fetch("/public/othersCategories.json")
+        fetch("/othersCategories.json")
         .then(res => res.json())
         .then(data => setCategoryData(data))
     },[])

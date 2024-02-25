@@ -21,17 +21,17 @@ import OtherCardDetails from "../components/OtherCardDetails";
         {
             path: '/',
             element: <Home></Home>,
-            loader: () => fetch('/public/categoris.json')
+            loader: () => fetch('/categoris.json')
         },        
         {
             path: '/courses',
             element: <PrivateRoutes><Courses></Courses></PrivateRoutes>,
-            loader: () => fetch('/public/categoris.json')
+            loader: () => fetch('/categoris.json')
         },
         {
           path: '/categories',
           element: <Category></Category>,
-          loader: () => fetch('/public/othersCategories.json')
+          loader: () => fetch('/othersCategories.json')
         },
         {
           path: '/login',
@@ -44,12 +44,12 @@ import OtherCardDetails from "../components/OtherCardDetails";
         {
           path: '/class/:id',
           element: <PrivateRoutes><Class></Class></PrivateRoutes>,
-          loader: () => fetch('/public/categoris.json')
+          loader: () => fetch('/categoris.json')
         },
         {
           path: '/otherCardDetails/:id',
           element: <PrivateRoutes><OtherCardDetails></OtherCardDetails></PrivateRoutes>,
-          loader: () => fetch('/public/othersCategories.json')
+          loader: () => fetch('/othersCategories.json')
         }
       ]
     },

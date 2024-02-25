@@ -7,7 +7,7 @@ const BestTeachers = () => {
     const[teacher, setTeacher] = useState([]);
 
     useEffect(()=>{
-        fetch("/public/categoris.json")
+        fetch("/categoris.json")
         .then(res => res.json())
         .then(data => setTeacher(data))
     },[])
